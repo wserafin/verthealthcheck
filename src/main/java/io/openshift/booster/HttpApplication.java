@@ -30,6 +30,7 @@ public class HttpApplication extends AbstractVerticle {
     router.get("/api/health/readiness").handler(rc -> rc.response().end("OK"));
     router.get("/api/health/liveness").handler(healthCheckHandler);
     router.get("/").handler(StaticHandler.create());
+    System.out.println("test it");
 
     vertx
       .createHttpServer()
